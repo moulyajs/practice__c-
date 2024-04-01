@@ -311,3 +311,156 @@ int main()
     return 0;
 }
 */
+// 8..........
+/*Write a C program to find the sum of all prime numbers within a given range [L, R],
+where L and R are the lower and upper bounds of the given range.*/
+/*
+#include <stdio.h>
+int main()
+{
+    int lower, upper, sum;
+    printf("enter lower limit:");
+    scanf("%d", &lower);
+    printf("enter upper limit:");
+    scanf("%d", &upper);
+    sum = 0;
+    for (int i = lower; i <= upper; i++)
+    {
+        int digit = i % 10;
+        if (digit == 2 || digit == 3 || digit == 5 || digit == 7)
+        {
+            sum = sum + i;
+        }
+        else
+            continue;
+    }
+    printf("sum = %d", sum);
+    return 0;
+}
+*/
+// 9..........
+/*Write a C program to find the sum of all even numbers and the product of all odd
+numbers in a given group of n numbers.*/
+/*
+#include <stdio.h>
+int main()
+{
+    int n, sum_even = 0, product_odd = 1;
+    printf("enter a number:");
+    scanf("%d", &n);
+    int m;
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &m);
+        if (m % 2 == 0)
+
+        {
+            sum_even += m;
+        }
+
+        else
+        {
+            product_odd *= m;
+        }
+    }
+    printf("sum of even numbers=%d\n", sum_even);
+    printf("product of odd numbers=%d", product_odd);
+    return 0;
+}
+*/
+// 10..........
+/*Given all three sides and angles of a triangle print whether the triangle is Equilateral,
+Isosceles, Scalene by checking the sides and Acute, Right, Obtuse Triangle by checking
+the angles.*/
+/*
+#include <stdio.h>
+int main()
+{
+    int s1, s2, s3;
+    int a1, a2, a3;
+    printf("enter sides of triangle:");
+    scanf("%d %d %d", &s1, &s2, &s3);
+    printf("enter the angles of trianle:");
+    scanf("%d %d %d", &a1, &a2, &a3);
+    if (s1 == s2 || s2 == s3 || s3 == s1)
+    {
+        printf("isosceles triangle");
+    }
+    else if (s1 == s2 && s2 == s3)
+    {
+        printf("equilateral triangle");
+    }
+    else
+    {
+        printf("scalene triangle");
+    }
+    if (a1 == 90 || a2 == 90 || a3 == 90)
+    {
+        printf("right angled triangle");
+    }
+    else if (a1 > 90 || a2 > 90 || a3 > 90)
+    {
+        printf("obtuse angled triangle");
+    }
+    else
+    {
+        printf("acute angled triangle");
+    }
+    return 0;
+}
+*/
+
+// 11........
+/*You are given an integer n, calculate the sum of prime digits present in the given integer
+n*/
+/*
+#include <stdio.h>
+int main()
+{
+    int n;
+    printf("enter a number");
+    scanf("%d", &n);
+    int sum = 0;
+    while (n != 0)
+    {
+        int digit = n % 10;
+        if (digit == 2 || digit == 3 || digit == 5 || digit == 7)
+            sum += digit;
+        n = n / 10;
+    }
+    printf("%d", sum);
+    return 0;
+}
+*/
+// 12........
+/*Write a program that takes two integers as input and checks if they form an amicable
+pair.A pair of numbers are called amicable pairs if the sum of the proper divisors of each
+number is equal to the other number. Print True if they are amicable pairs otherwise
+False.*/
+/*
+#include <stdio.h>
+int main()
+{
+    int num1, num2;
+    int sum1 = 0, sum2 = 0;
+    printf("enter num1:");
+    scanf("%d", &num1);
+    printf("enter num2");
+    scanf("%d", &num2);
+    for (int i = 1; i <= num1 / 2; i++)
+    {
+        if (num1 % i == 0)
+            sum1 += i;
+    }
+    for (int i = 1; i <= num2 / 2; i++)
+    {
+        if (num2 % i == 0)
+            sum2 += i;
+    }
+    if (num1 == sum2 && num2 == sum1)
+        printf("\nthey are amicable pairs");
+    else
+        printf("\nthey are not amicable pairs");
+    return 0;
+}
+*/
